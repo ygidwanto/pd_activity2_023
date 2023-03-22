@@ -1,20 +1,74 @@
-// PemogramanDasar.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+float Luaspersegipanjang(float p, float l) {
+	return p * l;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+float Luassegitiga(float a, float t) {
+	return 0, 5 * a * t;
+}
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+float Luaslingkaran(float r) {
+	return 3.14 * r * r;
+}
+
+
+int main() {
+
+	float panjang, lebar, tinggi, jejari, alas;
+	int pilihan;
+
+
+	cout << "===================" << endl;
+	cout << "======M E N U======" << endl;
+	cout << "===================" << endl;
+
+	cout << "1. Luas Persegipanjang" << endl;
+	cout << "2. Luas Segitiga" << endl;
+	cout << "3. Luas Lingkaran" << endl;
+	cout << "4. Exit" << endl;
+
+	cout << "Masukan pilihan :";
+	cin >> pilihan;
+
+
+	system("cls")
+
+		do
+		{
+
+
+			swich(pilihan)
+			{
+			case 1:
+				cout << "Masukan Panjang : ";
+				cin >> alas;
+				cout << "Masukan Lebar : ";
+				cin >> lebar;
+				cout << "Masukan persegipanjang = " << Luaspersegipanjang(panjang, lebar);
+				break;
+
+			case 2:
+				cout << "Masukan alas : ";
+				cin >> alas;
+				cout << "Masukan tinggi : ";
+				cin >> tinggi;
+				cout << "Luas Segitiga = " << Luassegitiga(alas, tinggi);
+				break;
+
+			case 3:
+				cout << "Masukan Jari-jari : ";
+				cin >> jejari;
+				cout << "Luas Lingkaran = " << Luaslingkaran(jejari);
+				break;
+
+			case 4:
+
+				break;
+			default:
+				cout << "Pilihan anda salah!";
+				break;
+			}
+		} while (pilihan = 4)
+}
